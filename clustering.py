@@ -13,7 +13,7 @@ def get_truth():
 
 def pic_hash():
     #initialize np array for hash vectors; code will map every picture to 8 element vector
-    hash=np.zeros((9700,8))
+    hash=np.zeros((9700,512))
     n=0
     #initalize list for saving picture names
     names=[]
@@ -38,8 +38,8 @@ def do_hash(img):
 
         )
     )
-    # hash picture with imagehash; this line will return a 8 element int vector
-    hash = np.array(bytearray.fromhex(str(imagehash.whash(img_crop, hash_size=8))))
+    # hash picture with imagehash; this line will return a 512 element int vector
+    hash = np.array(bytearray.fromhex(str(imagehash.whash(img_crop, hash_size=64))))
     return(hash)
 
 """rand_index function from Aula guy for python 3"""
