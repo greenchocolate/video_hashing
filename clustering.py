@@ -12,7 +12,7 @@ def get_truth():
     return truth
 
 def pic_hash():
-    #initialize np array for hash vectors; code will map every picture to 8 element vector
+    #initialize np array for hash vectors; code will map every picture to 512 element vector
     hash=np.zeros((9700,512))
     n=0
     #initalize list for saving picture names
