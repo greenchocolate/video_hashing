@@ -42,7 +42,7 @@ def do_hash(img):
     hash = np.array(bytearray.fromhex(str(imagehash.whash(img_crop, hash_size=64))))
     return(hash)
 
-"""rand_index function from Aula guy for python 3"""
+"""rand_index function from Aula for python 3"""
 def rand_index(clusters):
     truth=get_truth()
     elems = list(set.union(*truth))
